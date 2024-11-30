@@ -5,9 +5,10 @@ import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import Boton from "../Boton/Boton";
 
 const Formulario = () => {
-    const [nombre, setNombre] = useState(second);
-    const [puesto, setPuesto] = useState(second);
-    const [foto, setFoto] = useState(second);
+    const [nombre, setNombre] = useState("");
+    const [puesto, setPuesto] = useState("");
+    const [foto, setFoto] = useState("");
+    const [equipo, setEquipo] = useState("");
 
     const manejarEnvio = (e) => {
         e.preventDefault();
@@ -16,6 +17,7 @@ const Formulario = () => {
             nombre,
             puesto,
             foto,
+            equipo
         };
     };
 
@@ -44,7 +46,7 @@ const Formulario = () => {
                     valor={foto}
                     actualizarValor={setFoto}
                 />
-                <ListaOpciones />
+                <ListaOpciones valor={equipo} actualizarEquipo={setEquipo} />
                 <Boton texto="Crear" />
             </form>
         </section>
