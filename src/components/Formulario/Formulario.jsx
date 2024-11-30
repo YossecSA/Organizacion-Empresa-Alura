@@ -1,6 +1,7 @@
 import React from "react";
 import "./Formulario.css";
 import CampoTexto from "../CampoTexto/CampoTexto";
+import ListaOpciones from "../ListaOpciones/ListaOpciones";
 
 const Formulario = () => {
     return (
@@ -10,6 +11,7 @@ const Formulario = () => {
                 <CampoTexto titulo="Nombre" placeholder="Ingresar Nombre"/>
                 <CampoTexto titulo="Puesto" placeholder="Ingresar Puesto"/>
                 <CampoTexto titulo="Foto" placeholder="Ingresar Foto"/>
+                <ListaOpciones />
             </form>
         </section>
     );
