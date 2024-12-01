@@ -5,7 +5,7 @@ import Formulario from "./components/Formulario/Formulario";
 import MiOrg from "./components/MiOrg/MiOrg";
 import Equipo from "./components/Equipo/Equipo";
 import Footer from "./components/Footer/Footer";
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from "uuid";
 
 const App = () => {
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -71,12 +71,15 @@ const App = () => {
         setColaborador([...colaboradores, colaborador]);
     };
 
-    const eliminarColaborador = () => {
-        console.log("eliminado");
+    const eliminarColaborador = (id) => {
+        const nuevosColaboradores = colaboradores.filter(
+            (colaborador) => colaborador.id != id
+        );
+        setColaborador(nuevosColaboradores);
     };
 
     const actualizarColor = (color, id) => {
-        console.log(color)
+        console.log(color);
         const equiposActualizados = Equipos.map((equipo) => {
             if (equipo.id === id) {
                 equipo.colorSecundario = color;
