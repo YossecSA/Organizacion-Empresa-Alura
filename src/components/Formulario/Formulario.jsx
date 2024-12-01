@@ -19,6 +19,7 @@ const Formulario = (props) => {
             foto,
             equipo,
         };
+        props.registrarColaborador(datosEnviar);
     };
     return (
         <section className="formulario">
