@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto/CampoTexto";
 import ListaOpciones from "../ListaOpciones/ListaOpciones";
 import Boton from "../Boton/Boton";
 
-const Formulario = () => {
+const Formulario = (props) => {
     const [nombre, setNombre] = useState("");
     const [puesto, setPuesto] = useState("");
     const [foto, setFoto] = useState("");
@@ -17,10 +17,9 @@ const Formulario = () => {
             nombre,
             puesto,
             foto,
-            equipo
+            equipo,
         };
     };
-
     return (
         <section className="formulario">
             <form onSubmit={manejarEnvio}>
@@ -46,7 +45,11 @@ const Formulario = () => {
                     valor={foto}
                     actualizarValor={setFoto}
                 />
-                <ListaOpciones valor={equipo} actualizarEquipo={setEquipo} />
+                <ListaOpciones
+                    valor={equipo}
+                    actualizarEquipo={setEquipo}
+                    equipo={props.equipos}
+                />
                 <Boton texto="Crear" />
             </form>
         </section>
