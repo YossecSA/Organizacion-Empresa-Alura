@@ -89,6 +89,10 @@ const App = () => {
         actualizarEquipos(equiposActualizados);
     };
 
+    const crearEquipo = (nuevoEquipo) => {
+        actualizarEquipos([...Equipos, {...nuevoEquipo, id:uuid() }]);
+    };
+
     return (
         <div>
             <Header />
@@ -96,6 +100,7 @@ const App = () => {
                 <Formulario
                     equipos={Equipos.map((equipo) => equipo.titulo)}
                     registrarColaborador={registrarColaborador}
+                    crearEquipo={crearEquipo}
                 />
             ) : (
                 <></>
