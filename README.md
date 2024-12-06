@@ -47,5 +47,44 @@ Antes de ejecutar este proyecto, asegúrate de tener instalado lo siguiente en t
    ```bash
    npm run dev
     ```
+
+## 🛠️ Guía para editar la información de los equipos
+
+Si deseas modificar los equipos existentes, agregar nuevos equipos, o cambiar los colores, puedes hacerlo directamente en el archivo App.jsx en la parte donde se define el estado inicial de los equipos.
+
+
+
+1. **Ubica el siguiente bloque de código en App.jsx:**
+
+    ```bash
+    const [Equipos, actualizarEquipos] = useState([
+        {
+            id: uuid(),
+            titulo: "Programacion",
+            colorPrimario: "#D9F7E9",
+            colorSecundario: "#57C278",
+        },
+        {
+            id: uuid(),
+            titulo: "Front End",
+            colorPrimario: "#E8F8FF",
+            colorSecundario: "#82CFFA",
+        },
+    ]);
+    ```
+2. **Edita los datos según tus necesidades:**
+
+- Cambia el valor de titulo para modificar el nombre del equipo.
+
+- Ajusta los valores de colorPrimario y colorSecundario para personalizar los colores del equipo.
+
+- Si deseas agregar un nuevo equipo, simplemente añade un nuevo objeto con los campos correspondientes.
+
+3. **Guarda los cambios y reinicia la aplicación para ver reflejadas las modificaciones:**
+
+    ```bash
+    npm run dev
+    ```
+
 ## 🌟 Autor
 Desarrollado con ❤️ por Yossec Suarez Arratea. Si tienes preguntas o sugerencias, no dudes en contactarme.
