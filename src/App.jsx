@@ -15,8 +15,15 @@ const App = () => {
             equipo: "Front End",
             foto: "https://github.com/YossecSA.png",
             nombre: "Yossec Suarez",
-            puesto: "Docente",
+            puesto: "Programador",
         },
+        {
+            id: uuid(),
+            equipo: "UX y Diseño",
+            foto: "https://github.com/isaias65.png",
+            nombre: "Isaias Callegari",
+            puesto: "Programador"
+        }
     ]);
     const [Equipos, actualizarEquipos] = useState([
         {
